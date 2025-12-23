@@ -45,7 +45,6 @@ module WavixApi
     def request(method, path, params: {}, body: nil, headers: {})
       connection = Faraday.new(
         url: "https://#{@host}",
-        params: { appid: @api_key },
         headers: DEFAULT_HEADERS.merge(headers)
       ) do |builder|
         yield(builder) if block_given?
