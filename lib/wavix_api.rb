@@ -50,6 +50,7 @@ module WavixApi
       ) do |builder|
         yield(builder) if block_given?
 
+        builder.authorization :Bearer, @api_key
         builder.use FollowRedirectsMiddleware
         builder.adapter Faraday.default_adapter
       end
