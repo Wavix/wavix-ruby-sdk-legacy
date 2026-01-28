@@ -6,7 +6,7 @@ shared_context 'with creds' do
   let(:id) { nil }
   let(:full_path) { "https://#{host}/#{path}" }
   let(:path_with_creds) do
-    "#{full_path}?appid=#{api_key}".tap do |res|
+    "#{full_path}?".tap do |res|
       res << "&id=#{id}" unless id.nil?
     end
   end
