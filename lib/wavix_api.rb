@@ -43,10 +43,12 @@ module WavixApi
     FILE_NAMES = %i[attachment paper invoice].freeze
 
     def request(method, path, params: {}, body: nil, headers: {})
+      request_headers = DEFAULT_HEADERS.merge(headers)
+      request_headers['Authorization'] = "Bearer #{@api_key}" if @api_key
+
       connection = Faraday.new(
         url: "https://#{@host}",
-        params: { appid: @api_key },
-        headers: DEFAULT_HEADERS.merge(headers)
+        headers: request_headers
       ) do |builder|
         yield(builder) if block_given?
 

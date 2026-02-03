@@ -172,7 +172,7 @@ module WavixApi
     end
 
     def additional_params
-      { appid: WavixApi.api_key }.tap do |res|
+      {}.tap do |res|
         res[:id] = id if !id.nil? && (id.is_a?(Integer) || id.empty?)
       end
     end
