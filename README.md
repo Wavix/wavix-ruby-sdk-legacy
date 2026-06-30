@@ -1,3 +1,12 @@
+> [!WARNING]
+> **This SDK is deprecated and no longer maintained.**
+> Use the new, actively maintained SDK instead:
+> **[`wavix-ruby-sdk`](https://github.com/Wavix/wavix-ruby-sdk)**
+>
+> ```sh
+> gem install wavix-ruby-sdk
+> ```
+
 # Wavix Backend Public API Ruby SDK
 
 Welcome to the Wavix Ruby SDK documentation. This guide will walk you through installing, configuring, and using the Wavix Ruby SDK to interact seamlessly with the Wavix Backend Public API.
