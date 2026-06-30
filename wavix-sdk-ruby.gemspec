@@ -5,12 +5,14 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |s|
   s.name          = 'wavix-sdk-ruby'
-  s.version       = '1.1.0'
+  s.version       = '1.1.1'
   s.authors       = ['Wavix']
   s.email         = ['support@wavix.com']
   s.summary       = 'Wavix Public API SDK for Ruby'
   s.homepage      = 'https://wavix.com'
   s.license       = 'MIT'
+  s.post_install_message = "wavix-sdk-ruby is deprecated and no longer maintained. " \
+                           "Use 'wavix-ruby-sdk' instead: gem install wavix-ruby-sdk"
   s.metadata = {
     'homepage_uri' => 'http://wavix.com/',
     'changelog_uri' => 'https://ci.unitedline.net/wavix/wavix-sdk-ruby/-/tree/master/CHANGELOG.md',
